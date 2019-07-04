@@ -7,7 +7,20 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
+  
+<import src="a.wxml"></import>
+<template is="a"></template>
+
+  <!--template name="tempItem">
+    <view>
+      <view>收件人：{{name}}</view>
+      <view>联系方式：{{phone}}</view>
+      <view>地址：{{address}}</view>
+    </view>
+  </template>
+  <template is="tempItem" data="{{...item}}"></template-->
+
+  <!----view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
+  </view--->
 </view>

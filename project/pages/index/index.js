@@ -4,10 +4,16 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'ahhhhhh',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    item:{
+      name:"Atlas",
+      phone:"1888888888",
+      address:"China"
+    }
+    //condition: Math.floor(Math.random()*3+1)
+    //motto: 'ahhhhhh',
+    //userInfo: {},
+    //hasUserInfo: false,
+    //canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
   bindViewTap: function() {
