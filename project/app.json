@@ -1,8 +1,25 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/recognition/recognition"
   ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "res/list.png",
+        "selectedIconPath": "res/list_HL.png",
+        "text": "列表"
+      },
+      {
+        "pagePath": "pages/recognition/recognition",
+        "iconPath": "res/recognition.png",
+        "selectedIconPath": "res/recognition_HL.png",
+        "text": "识别"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

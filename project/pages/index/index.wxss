@@ -1,21 +1,69 @@
-/**index.wxss**/
-.userinfo {
+.searchbar-result {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.searchbar-result:before {
+  display: none;
+}
+
+.weui-cell {
+  padding: 12px 15px 12px 35px;
+}
+
+.page__bd {
+  height: 100%;
+}
+
+.page__bd {
+  padding-bottom: 0;
+}
+
+.weui-tab__content {
+  padding-top: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.placeholder {
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  background-color: #ebebeb;
+  height: 2.3em;
+  line-height: 2.3em;
+  color: #cfcfcf;
+}
+
+.my_title {
+  font-size: 26px;
+  letter-spacing: 5px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: 3px 3px rgba(182, 165, 165, 0.418), 2px 2px white;
+  font-weight: bold;
+}
+
+.my_word {
+  padding-left: 20px;
+  font-size: 18px;
+  color: rgb(16, 52, 68);
+  letter-spacing: 3px;
+}
+.my_list{
+  padding-left:20px; 
+}
+.my_listitem{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.my_block {
+  font-size: 15px;
+  color: #fafafa;
+  letter-spacing: 0;
+  text-shadow: 1px 1px 1px #777, 2px 2px 1px #666, 3px 3px 1px #555;
 }

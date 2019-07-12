@@ -1,4 +1,0 @@
-<view>Hello</view>
-<template name="a">
-  Hello,World!
-</template>
