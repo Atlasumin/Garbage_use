@@ -46,18 +46,22 @@
 
 .my_word {
   padding-left: 20px;
-  font-size: 18px;
+  font-size: 20px;
   color: rgb(16, 52, 68);
   letter-spacing: 3px;
+  text-align: justify;
 }
 .my_list{
-  padding-left:20px; 
+  padding-left:20px;
+   
 }
 .my_listitem{
+  padding-top:6px; 
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 

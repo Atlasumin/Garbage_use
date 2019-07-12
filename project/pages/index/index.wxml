@@ -55,25 +55,126 @@
 
           <view class="page__hd">
             <view class="my_title">什么是可回收垃圾？</view>
-            <view class="my_word">生鱼片</view>
+            <view class="my_word">{{page1_data.description}}</view>
             <view class="my_title">丢弃时的注意事项：</view>
             <view class='my_list'>
-              <view class='my_listitem'>
-                <image mode="aspectFill" src='{{picture_tip}}' style="width:20px;height:20px"></image>
-                <view class='my_word'>666</view>
+              <view class='my_listitem' wx:for="{{page1_data.requirement}}" wx:for-item="cell" wx:key="index">
+                <view>
+                  <image mode="aspectFill" src='{{picture_tip}}' style="width:20px;height:20px"></image>
+                </view>
+                <view class='my_word'>{{cell}}</view>
               </view>
-
             </view>
-            <view class='my_title'>可回收垃圾的细分：</view>
-
+            <view class="weui-panel weui-panel_access">
+              <view class="weui-panel__hd">可回收垃圾的细分</view>
+              <view class="weui-panel__bd" wx:for="{{page1_data.detail}}" wx:for-item="cell" wx:key="index">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='toDetail' data-all="{{cell}}" data-title='可回收垃圾'>
+                  <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="{{icon60}}" />
+                  </view>
+                  <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{cell.className}}</view>
+                    <view class="weui-media-box__desc">{{cell.example}}</view>
+                  </view>
+                </navigator>
+              </view>
+            </view>
           </view>
 
-
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        
+        <view class="page__hd">
+            <view class="my_title">什么是有害垃圾？</view>
+            <view class="my_word">{{page2_data.description}}</view>
+            <view class="my_title">丢弃时的注意事项：</view>
+            <view class='my_list'>
+              <view class='my_listitem' wx:for="{{page2_data.requirement}}" wx:for-item="cell" wx:key="index">
+                <view>
+                  <image mode="aspectFill" src='{{picture_tip}}' style="width:20px;height:20px"></image>
+                </view>
+                <view class='my_word'>{{cell}}</view>
+              </view>
+            </view>
+            <view class="weui-panel weui-panel_access">
+              <view class="weui-panel__hd">有害垃圾的细分</view>
+              <view class="weui-panel__bd" wx:for="{{page2_data.detail}}" wx:for-item="cell" wx:key="index">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='toDetail' data-all="{{cell}}" data-title='有害垃圾'>
+                  <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="{{icon60}}" />
+                  </view>
+                  <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{cell.className}}</view>
+                    <view class="weui-media-box__desc">{{cell.example}}</view>
+                  </view>
+                </navigator>
+              </view>
+            </view>
+          </view>
+        
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        
+        <view class="page__hd">
+            <view class="my_title">什么是干垃圾？</view>
+            <view class="my_word">{{page4_data.description}}</view>
+            <view class="my_title">丢弃时的注意事项：</view>
+            <view class='my_list'>
+              <view class='my_listitem' wx:for="{{page4_data.requirement}}" wx:for-item="cell" wx:key="index">
+                <view>
+                  <image mode="aspectFill" src='{{picture_tip}}' style="width:20px;height:20px"></image>
+                </view>
+                <view class='my_word'>{{cell}}</view>
+              </view>
+            </view>
+            <view class="weui-panel weui-panel_access">
+              <view class="weui-panel__hd">干垃圾的细分</view>
+              <view class="weui-panel__bd" wx:for="{{page4_data.detail}}" wx:for-item="cell" wx:key="index">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='toDetail' data-all="{{cell}}" data-title='干垃圾'>
+                  <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="{{icon60}}" />
+                  </view>
+                  <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{cell.className}}</view>
+                    <view class="weui-media-box__desc">{{cell.example}}</view>
+                  </view>
+                </navigator>
+              </view>
+            </view>
+          </view>
+        
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+        
+        <view class="page__hd">
+            <view class="my_title">什么是湿垃圾？</view>
+            <view class="my_word">{{page3_data.description}}</view>
+            <view class="my_title">丢弃时的注意事项：</view>
+            <view class='my_list'>
+              <view class='my_listitem' wx:for="{{page3_data.requirement}}" wx:for-item="cell" wx:key="index">
+                <view>
+                  <image mode="aspectFill" src='{{picture_tip}}' style="width:20px;height:20px"></image>
+                </view>
+                <view class='my_word'>{{cell}}</view>
+              </view>
+            </view>
+            <view class="weui-panel weui-panel_access">
+              <view class="weui-panel__hd">湿垃圾的细分</view>
+              <view class="weui-panel__bd" wx:for="{{page3_data.detail}}" wx:for-item="cell" wx:key="index">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='toDetail' data-all="{{cell}}" data-title='湿垃圾'>
+                  <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="{{icon60}}" />
+                  </view>
+                  <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{cell.className}}</view>
+                    <view class="weui-media-box__desc">{{cell.example}}</view>
+                  </view>
+                </navigator>
+              </view>
+            </view>
+          </view>
 
         </view>
-        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">有害垃圾的内容</view>
-        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">干垃圾的内容</view>
-        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">湿垃圾的内容</view>
       </view>
     </view>
   </view>

@@ -3,6 +3,38 @@
   flex-direction: column;
   padding: 40rpx;
 }
+
 .log-item {
   margin: 10rpx;
+}
+
+.placeholder {
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  background-color: #c54444;
+  height: 2.3em;
+  line-height: 2.3em;
+  color: #cfcfcf; 
+  border-radius: 0.5em;
+}
+
+.my_flex_box {
+  width: 94vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start
+}
+.my_title {
+  font-size: 26px;
+  letter-spacing: 5px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: 3px 3px rgba(182, 165, 165, 0.418), 2px 2px white;
+  font-weight: bold;
 }

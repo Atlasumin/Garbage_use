@@ -1,6 +1,10 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="page">
+  <view class="my_title">{{title}}</view>
+
+  <view class='my_flex_box'>
+    <view  style='flex-grow:1' wx:for="{{dataList.example}}" wx:for-item="cell" wx:key="index">
+      <view class="placeholder">{{cell}}</view>
+    </view>
+  </view>
 </view>
