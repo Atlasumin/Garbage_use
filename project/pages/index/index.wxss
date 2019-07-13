@@ -37,10 +37,10 @@
   margin: 5px;
   padding: 0 10px;
   text-align: center;
-  background-color: #d6c4c452;
+  background-color: rgba(128, 128, 128, 0.301);
   height: 2.3em;
   line-height: 2.3em;
-  color: #a8a4a4; 
+  color: #ffffff; 
   border-radius: 0.5em;
 }
 
