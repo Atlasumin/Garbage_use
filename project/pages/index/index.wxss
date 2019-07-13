@@ -71,3 +71,7 @@
   letter-spacing: 0;
   text-shadow: 1px 1px 1px #777, 2px 2px 1px #666, 3px 3px 1px #555;
 }
+
+.my_searchBarButton{
+  background-color:rgba(0, 128, 0, 0.041);
+}

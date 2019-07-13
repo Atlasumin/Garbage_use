@@ -1,0 +1,32 @@
+<!--pages/search_result/search_result.wxml-->
+<view class="page__hd">
+  <view class="my_title">{{title}}</view>
+
+  <!--如果关键字没有查到结果，不显示下面的列表-->
+  <view class="weui-panel weui-panel_access" wx:if="{{hasResult == true}}">
+    <view class="weui-panel__bd" >
+      <view class="weui-media-box weui-media-box_text" wx:for="{{resultList}}" wx:for-item="cell" wx:key="index">
+        <view class="weui-media-box__title weui-media-box__title_in-text">{{cell.name}}</view>
+        <view wx:for="{{cell.detail}}" wx:for-item="smallCell" wx:key="smallIndex">
+          <view class="weui-media-box__desc">{{smallCell.name}}：{{smallCell.example}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--如果关键字没有查到结果，显示提示信息-->
+  <view class='page__bd'>
+    <view class="icon-box" wx:if="{{hasResult == false}}">
+      <icon type="info" size="93"></icon>
+      <view class="icon-box__ctn">
+        <view class="icon-box__title">提示</view>
+        <view class="icon-box__desc">该垃圾还没能完成归类，请自行判断如何分类</view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+</view>

@@ -16,27 +16,12 @@
       </view>
       <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
     </view>
-    <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
-      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+    <view class="weui-cells searchbar-result my_searchBarButton" wx:if="{{inputVal.length > 0}}">
+      <view class="weui-cell" hover-class="weui-cell_active" bindtap='search' data-keywords='{{inputVal}}' >
         <view class="weui-cell__bd">
-          <view>实时搜索文本</view>
+          <view>搜索"{{inputVal}}"</view>
         </view>
-      </navigator>
-      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">
-          <view>实时搜索文本</view>
-        </view>
-      </navigator>
-      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">
-          <view>实时搜索文本</view>
-        </view>
-      </navigator>
-      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">
-          <view>实时搜索文本</view>
-        </view>
-      </navigator>
+      </view>
     </view>
   </view>
 

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/recognition/recognition"
+    "pages/recognition/recognition",
+    "pages/search_result/search_result"
   ],
   "tabBar": {
     "list": [
