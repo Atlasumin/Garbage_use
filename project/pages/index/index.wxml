@@ -17,9 +17,20 @@
       <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
     </view>
     <view class="weui-cells searchbar-result my_searchBarButton" wx:if="{{inputVal.length > 0}}">
-      <view class="weui-cell" hover-class="weui-cell_active" bindtap='search' data-keywords='{{inputVal}}' >
+      <view class="weui-cell" hover-class="weui-cell_active" bindtap='search' data-keywords='{{inputVal}}'>
         <view class="weui-cell__bd">
           <view>搜索"{{inputVal}}"</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells searchbar-result my_searchBarButton" wx:if="{{isShowHis == true && hisData.length != 0}}">
+      <view>
+        <view>历史搜索记录：</view>
+        <view class='my_flex_box'>
+          <view style='flex-grow:1' wx:for="{{hisData}}" wx:for-item="cell" wx:key="index">
+            <view class="his_placeholder" hover-class='weui-cell_active' bindtap='search' data-keywords='{{cell}}'>{{cell}}</view>
+          </view>
         </view>
       </view>
     </view>
@@ -68,8 +79,8 @@
 
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-        
-        <view class="page__hd">
+
+          <view class="page__hd">
             <view class="my_title">什么是有害垃圾？</view>
             <view class="my_word">{{page2_data.description}}</view>
             <view class="my_title">丢弃时的注意事项：</view>
@@ -96,11 +107,11 @@
               </view>
             </view>
           </view>
-        
+
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-        
-        <view class="page__hd">
+
+          <view class="page__hd">
             <view class="my_title">什么是干垃圾？</view>
             <view class="my_word">{{page4_data.description}}</view>
             <view class="my_title">丢弃时的注意事项：</view>
@@ -127,11 +138,11 @@
               </view>
             </view>
           </view>
-        
+
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
-        
-        <view class="page__hd">
+
+          <view class="page__hd">
             <view class="my_title">什么是湿垃圾？</view>
             <view class="my_word">{{page3_data.description}}</view>
             <view class="my_title">丢弃时的注意事项：</view>

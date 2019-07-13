@@ -16,8 +16,6 @@ Page({
     let title = options.first + "：" + item.className;
     this.setData({dataList:item});
     this.setData({title:title});
-    console.log(this.data.dataList);
-    console.log(this.data.dataList.example);
 
   }
 })

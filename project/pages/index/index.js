@@ -6,6 +6,8 @@ Page({
   data: {
     inputShowed: false,
     inputVal: "",
+    isShowHis: false,
+    hisData:[],
 
     //导航栏数据
     tabs: ["可回收垃圾", "有害垃圾", "干垃圾", "湿垃圾"],
@@ -17,14 +19,28 @@ Page({
 
   },
   showInput: function () {
+    var that = this;
+    //从微信存储中读取历史数据
+    wx.getStorage({
+      key: 'hisData',
+      success(res) {
+        console.log(res.data)
+        that.setData({
+          hisData:res.data,
+        })
+      }
+    })
     this.setData({
-      inputShowed: true
+      inputShowed: true,
+      //如果点击了输入框，弹出历史搜索
+      isShowHis: true,
     });
   },
   hideInput: function () {
     this.setData({
       inputVal: "",
-      inputShowed: false
+      inputShowed: false,
+      isShowHis: false,
     });
   },
   clearInput: function () {
@@ -92,6 +108,25 @@ Page({
     //跳转页面到搜索结果，发送数据\
     let srcStr = JSON.stringify(src);
     let jsonStr = JSON.stringify(result);
+    //清理当前输入框的内容并保存内容到历史记录中。
+    this.clearInput();
+    this.hideInput();
+    let tempList = this.data.hisData;
+    if(tempList.indexOf(keywords) != -1){//当历史记录中有当前搜索的内容时，将该内容前移
+      tempList.splice(tempList.indexOf(keywords),1);
+      tempList.unshift(keywords);
+    }else{//当历史记录中没有时，判断数组元素是否到了6个，如果到了就删除最后一个记录，将新记录插入第一个位置
+      if (tempList.length >= 6){
+        tempList.pop();
+      }
+      tempList.unshift(keywords);
+    }
+    wx.setStorage({
+      key: "hisData",
+      data: tempList,
+    })
+    
+
     wx.navigateTo({
       url: '../search_result/search_result?srcStr=' + srcStr +'&jsonStr=' + jsonStr + '&keywords=' + keywords,
     })
