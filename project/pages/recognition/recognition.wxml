@@ -1,2 +1,11 @@
 <!--pages/recognition/recognition.wxml-->
-<text>pages/recognition/recognition.wxml</text>
+
+<view class="container">
+  <view>
+    <button class="btn" bindtap="chooseimage">拍摄/选择图片</button>
+  </view>
+ 
+  <view>
+    <image src="{{img}}" catchTap="chooseImageTap" mode="aspectFit" class="img" />
+  </view>
+</view>
