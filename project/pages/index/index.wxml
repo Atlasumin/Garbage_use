@@ -66,7 +66,7 @@
               <view class="weui-panel__bd" wx:for="{{page1_data.detail}}" wx:for-item="cell" wx:key="index">
                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='toDetail' data-all="{{cell}}" data-title='可回收垃圾'>
                   <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                    <image class="weui-media-box__thumb" src="{{icon60}}" />
+                    <image class="weui-media-box__thumb" src="{{cell.pic[0]}}" />
                   </view>
                   <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                     <view class="weui-media-box__title">{{cell.className}}</view>
@@ -97,7 +97,7 @@
               <view class="weui-panel__bd" wx:for="{{page2_data.detail}}" wx:for-item="cell" wx:key="index">
                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='toDetail' data-all="{{cell}}" data-title='有害垃圾'>
                   <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                    <image class="weui-media-box__thumb" src="{{icon60}}" />
+                    <image class="weui-media-box__thumb" src="{{cell.pic[0]}}" />
                   </view>
                   <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                     <view class="weui-media-box__title">{{cell.className}}</view>
@@ -128,7 +128,7 @@
               <view class="weui-panel__bd" wx:for="{{page4_data.detail}}" wx:for-item="cell" wx:key="index">
                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='toDetail' data-all="{{cell}}" data-title='干垃圾'>
                   <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                    <image class="weui-media-box__thumb" src="{{icon60}}" />
+                    <image class="weui-media-box__thumb" src="{{cell.pic[0]}}" />
                   </view>
                   <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                     <view class="weui-media-box__title">{{cell.className}}</view>
@@ -159,7 +159,7 @@
               <view class="weui-panel__bd" wx:for="{{page3_data.detail}}" wx:for-item="cell" wx:key="index">
                 <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='toDetail' data-all="{{cell}}" data-title='湿垃圾'>
                   <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                    <image class="weui-media-box__thumb" src="{{icon60}}" />
+                    <image class="weui-media-box__thumb" src="{{cell.pic[0]}}" />
                   </view>
                   <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                     <view class="weui-media-box__title">{{cell.className}}</view>
