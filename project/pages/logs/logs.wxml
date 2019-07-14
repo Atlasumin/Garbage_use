@@ -2,6 +2,12 @@
 <view class="page">
   <view class="my_title">{{title}}</view>
 
+  <view class='my_pic_flex_box'>
+    <view  style='flex-grow:1' wx:for="{{dataList.pic}}" wx:for-item="cell" wx:key="index">
+      <image mode="aspectFill" src='{{cell}}' class='my_image'></image>
+    </view>
+  </view>
+
   <view class='my_flex_box'>
     <view  style='flex-grow:1' wx:for="{{dataList.example}}" wx:for-item="cell" wx:key="index">
       <view class="placeholder">{{cell}}</view>
