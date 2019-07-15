@@ -4,7 +4,6 @@
     "pages/logs/logs",
     "pages/recognition/recognition",
     "pages/search_result/search_result",
-    "pages/ad d",
     "pages/add/add"
   ],
   "tabBar": {
@@ -28,6 +27,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+    
   },
   "sitemapLocation": "sitemap.json"
 }

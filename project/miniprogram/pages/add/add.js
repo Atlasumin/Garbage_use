@@ -1,4 +1,4 @@
-// miniprogram/pages/add/add.js
+// pages/add/add.js
 Page({
 
   /**

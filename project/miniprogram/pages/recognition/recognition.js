@@ -2,8 +2,8 @@ Page({
   data: {
     //img: '../../images/1.jpg'
   },
-  onLoad: function (path) {
-    let result = false;
+  uploadf: function (path) {
+    //let result = false;
     let name = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'));
     wx.cloud.uploadFile({
       cloudPath: name,
@@ -11,6 +11,7 @@ Page({
     }).then(res => {
       // get resource ID
       let id = res.fileID;
+      console.log('fileid:' + id)
       //调用云函数识别图片
       wx.cloud.callFunction({
         name: 'photo2know',
@@ -18,34 +19,13 @@ Page({
           fileID: id
         }
       }).then(res => {
-        let result = res.result.words_result;
-        if (result.length > 0) {
-          let arr = '';
-          for (let i = 0; i < result.length; i++) {
-            arr += result[i].words
-          }
-          this.setData({
-            words_result: arr
-          })
-        } else {
-          this.setData({
-            words_result: ''
-          })
-        }
-        //删除图片
-        wx.cloud.deleteFile({
-          fileList: [id]
-        }).then(res => {
-          // handle success
-        }).catch(error => {
-          // handle error
-        })
+        console.log('cloud')
+        console.log(res)
       }).catch(err => {
         console.log(err)
       });
 
     }).catch(error => {
-
     });
    },
 
@@ -71,7 +51,7 @@ Page({
         wx.showLoading({
           title: '识别中'
         });
-        this.uplaodF(tempFilePaths);
+        this.uploadf(tempFilePaths);
         setTimeout(function () {
           wx.hideLoading();
         }, 3000);

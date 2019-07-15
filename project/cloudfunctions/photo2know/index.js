@@ -1,9 +1,11 @@
 'use strict';
+cloud.init();
 
 const cloud = require('wx-server-sdk')
 var AipImageClassifyClient = require("baidu-aip-sdk").imageClassify;
 const args = require("conf.js");
-cloud.init();
+wx.cloud=true;
+
 // 云函数入口函数
 exports.main = async (event, context) => {
   // 设置APPID/AK/SK
@@ -18,10 +20,25 @@ exports.main = async (event, context) => {
   })
   let image = res.fileContent.toString("base64");
   // 调用通用文字识别, 图片参数为远程url图片
+
+
+  return await client.advancedGeneral(image).then(function (result) {
+    //console.log('get result ok')
+    return result;
+  }).catch(function (err) {
+    // 如果发生网络错误
+    //console.log('get result fail');
+    console.log(err);
+    return result
+  });
+
+
+  /*
   return client.generalBasic(image);
   console.log(result);
    then(function (result) {
      let result = JSON.stringify(result);
      return result;
    })
+   */
 }
