@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/recognition/recognition",
-    "pages/search_result/search_result"
+    "pages/search_result/search_result",
+    "pages/ad d",
+    "pages/add/add"
   ],
   "tabBar": {
     "list": [

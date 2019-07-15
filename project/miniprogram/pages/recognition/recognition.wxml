@@ -2,7 +2,10 @@
 
 <view class="container">
   <view>
-    <button class="btn" bindtap="chooseimage">拍摄/选择图片</button>
+    <button class="btn" bindtap="chooseimage">
+      <view class="btntext">Take a photo !</view>
+      <image class='btnImg' src='../../images/sys.png'></image>
+    </button>
   </view>
  
   <view>

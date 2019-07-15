@@ -1,9 +1,0 @@
-/* pages/recognition/recognition.wxss */
-.btn {
-  margin: 140rpx;
-}
- 
-.img {
-  width: 100%;
-  height: 480rpx;
-}
