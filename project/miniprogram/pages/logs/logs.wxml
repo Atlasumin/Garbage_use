@@ -4,7 +4,7 @@
 
   <view class='my_pic_flex_box'>
     <view  style='flex-grow:1' wx:for="{{dataList.pic}}" wx:for-item="cell" wx:key="index">
-      <image mode="aspectFill" src='{{cell}}' class='my_image'></image>
+      <image mode="aspectFill" src='{{cell}}' class='my_image' bindtap='previewImg' data-srcset='{{dataList.pic}}' data-index='{{index}}'></image>
     </view>
   </view>
 
